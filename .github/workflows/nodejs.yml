@@ -1,6 +1,6 @@
 # .github/workflows/nodejs.yml 
 name: Node.js CI/CD 
-on: 
+ on: 
   push: 
     branches: [ main ] 
   pull_request: 
@@ -38,8 +38,13 @@ jobs:
         run: | 
           echo "Deploying application to Staging environment..." 
           echo "Application version: $(git rev-parse --short HEAD)" 
-          echo "Deployment to Staging successful!"
-  deploy-to-production: 
+          echo "Deployment to Staging successful!" 
+ 
+   
+ 
+ 
+ 
+deploy-to-production: 
     needs: deploy-to-staging          # This job depends on Staging deployment passing 
     runs-on: ubuntu-latest 
     environment: Production           # Specify the Production environment 
