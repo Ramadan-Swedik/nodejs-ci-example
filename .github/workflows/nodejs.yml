@@ -55,7 +55,7 @@ deploy-to-production:
  
       - name: Simulate deployment to Production 
         run: | 
-          echo "Deploying application to Production environment..." 
+          echo "Deploying application to Production environment...  " 
           echo "Application version: $(git rev-parse --short HEAD)" 
           echo "Deployment to Production successful!" 
           # In a real scenario, this would involve commands to deploy to a cloud service 
